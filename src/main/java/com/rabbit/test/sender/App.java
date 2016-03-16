@@ -10,21 +10,30 @@ import com.rabbit.test.sender.rabbitmq.RabbitGateManager;
 public class App 
 {
     private static Logger LOG = LogManager.getRootLogger();
-    private RabbitConnectionManager rabbitConnectionManager = RabbitGateManager.getInstance().getRabbitConnectionManager();
+    private RabbitConnectionManager rcm;
     
-    public static void main( String[] args )
-    {
-        LOG.info( "Hello World!" );
+    public static void main( String[] args ) throws InterruptedException  {
         App app = new App();
-        app.sleepUntilRabbitConnectionSucceed();
+        app.initPro();
+    }
+    
+    private void initPro() throws InterruptedException{
+        rcm = RabbitGateManager.getInstance().getRabbitConnectionManager();
+        LOG.info("getting rabbitConnectionManager ready!!!");
+        Thread.sleep(5000);
+        sleepUntilRabbitConnectionSucceed();
         
+        LOG.info("RabbitMq is now ready to send and recieve messages");
         Thread rabbitTestThread = new Thread(new TestRunnable(), "TestSenderRunnable");
         rabbitTestThread.start();
     }
     
+    /**
+     * wait until rabbitConnectionManager is ready
+     */
     private void sleepUntilRabbitConnectionSucceed() {
         for (;;) {
-            RabbitMessageConsumer rConsumer = rabbitConnectionManager.getRabbitMessageConsumer();
+            RabbitMessageConsumer rConsumer = rcm.getRabbitMessageConsumer();
             if (rConsumer == null) {
                 LOG.info("rConsumer is null. Rabbit connection is not ready yeat");
                 try {
@@ -36,6 +45,5 @@ public class App
                 return;
             }
         }
-
     }
 }

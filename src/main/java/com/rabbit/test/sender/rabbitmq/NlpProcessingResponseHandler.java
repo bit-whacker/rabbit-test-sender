@@ -13,7 +13,7 @@ import com.lacheff.commonutil.rabbitmq.support.ExchangeType;
 import com.lacheff.commonutil.rabbitmq.support.RoutingKey;
 
 public class NlpProcessingResponseHandler implements RabbitMessageHander {
-    private static Logger LOG = LogManager.getLogger(NlpProcessingResponseHandler.class);
+    private static Logger LOG = LogManager.getRootLogger();
     
     @Override
     public void handle(Object receivedObject) {
@@ -46,11 +46,11 @@ public class NlpProcessingResponseHandler implements RabbitMessageHander {
     }
     
     private void handleObj(NlpProcessingResponse response) {
-        LOG.debug("NlpProcessingResponse handled successfully!");
+        LOG.info("NlpProcessingResponse handled successfully: {}", response);
     }
     
-    private void handleNlpSummarizationResponse(NlpSummarizationResponse nlpSummarizationResponse){
-        LOG.debug("NlpSummarizationResponse handled successfully!");
+    private void handleNlpSummarizationResponse(NlpSummarizationResponse response){
+        LOG.info("NlpSummarizationResponse handled successfully: {}", response);
     }
 
 }

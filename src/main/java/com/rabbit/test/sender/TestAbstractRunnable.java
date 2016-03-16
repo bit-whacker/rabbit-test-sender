@@ -10,16 +10,17 @@ public abstract class TestAbstractRunnable implements Runnable {
     
     @Override
     public void run() {
-        LOG.info("RabbitTestSender is Running!!!");
         try {
             testInfiniteLoop();
         } catch (InterruptedException e) {
             LOG.error("InterruptedException at top level: ", e);
         }
         LOG.warn("RabbitTestSending is Completed!!!");
+        //. System.exit(0);
     }
     
     private void testInfiniteLoop() throws InterruptedException {
+        LOG.info("Start Sending Messages");
         while (true) {
             try {
                 startSendingTestMessages();
