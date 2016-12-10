@@ -97,52 +97,52 @@ Example:
 
 ## 2.2 Installation
 - Database Intallation:
-	a.	Microsoft SQL Sever 2008 R2
-	b.	Install the database and set its password “123” and login “sa”
-	c.	Where Server name is (local)
-	d.	Authentication isset to “SQL Server Authentication”
-	e.	Create a database with Name “MMLLM”
-	f.	Select the database “MMLLM” and right click and select new query
-	g.	Download the “MMLLMscript.sql” 
-	h.	Open the MMLLMscript.sql file.
-	i.	Copy all the queries and paste into  new query window.
-	j.	Then Execute the query 
-	k.	Database is ready for the working
+	*	Microsoft SQL Sever 2008 R2
+	*	Install the database and set its password “123” and login “sa”
+	*	Where Server name is (local)
+	*	Authentication isset to “SQL Server Authentication”
+	*	Create a database with Name “MMLLM”
+	*	Select the database “MMLLM” and right click and select new query
+	*	Download the “MMLLMscript.sql” 
+	*	Open the MMLLMscript.sql file.
+	*	Copy all the queries and paste into  new query window.
+	*	Then Execute the query 
+	*	Database is ready for the working
 - Java and JDK setup
 	JDK and JAVA_HOME
-	a.	Make sure JDK is installed, and “JAVA_HOME” variable is added as Windows environment variable
+	*	Make sure JDK is installed, and “JAVA_HOME” variable is added as Windows environment variable
 - Apache Maven Installation
-	a.	Download Apache Maven and install it
-	b.	Visit Maven official website, download the Maven zip file,
+	*	Download Apache Maven and install it
+	*	Visit Maven official website, download the Maven zip file,
 		for example : apache-maven-3.2.2-bin.zip. Unzip it to the folder you want to install Maven.
 		(Assume you unzip to this folder – C:\Program Files\Apache\maven)
-	c.	Add MAVEN_HOME
-	d.	Add  MAVEN_HOME variables in the Windows environment, and point it to your Maven folder.
-	e.	Add to PATH
-	f.	Update PATH variable, append Maven bin folder, so that you can run the Maven’s command everywhere.
-	g.	Verification by running  mvn –version in the command prompt.
+	*	Add MAVEN_HOME
+	*	Add  MAVEN_HOME variables in the Windows environment, and point it to your Maven folder.
+	*	Add to PATH
+	*	Update PATH variable, append Maven bin folder, so that you can run the Maven’s command everywhere.
+	*	Verification by running  mvn –version in the command prompt.
 -Apache Tomcat Installation
-	a.	Goto http://tomcat.apache.org ⇒ Downloads ⇒ Tomcat 8.0 ⇒ "8.0.{xx}" (where {xx} is the latest upgrade number) ⇒ Binary Distributions ⇒ Core ⇒ "ZIP" package (e.g., "apache-tomcat-8.0.{xx}.zip", about 8 MB).
-	b.	Create your project directory, say "drive:\myProject" or "drive:\myProject". UNZIP the downloaded file into your project directory. Tomcat will be unzipped into directory "drive:\myProject\apache-tomcat-8.0.{xx}".
-	c.	For ease of use, we shall shorten and rename this directory to "drive:\myProject\tomcat".
+	*	Goto http://tomcat.apache.org ⇒ Downloads ⇒ Tomcat 8.0 ⇒ "8.0.{xx}" (where {xx} is the latest upgrade number) ⇒ Binary Distributions ⇒ Core ⇒ "ZIP" package (e.g., "apache-tomcat-8.0.{xx}.zip", about 8 MB).
+	*	Create your project directory, say "drive:\myProject" or "drive:\myProject". UNZIP the downloaded file into your project directory. Tomcat will be unzipped into directory "drive:\myProject\apache-tomcat-8.0.{xx}".
+	*	For ease of use, we shall shorten and rename this directory to "drive:\myProject\tomcat".
 -Build Project
-	a.	Download src and pom file into the appropriate project folder
-	b.	Start Command Prompt
-	c.	Change the directory to your project directory and folder
-	d.	Run “mvn clear install” command
-	e.	After succesful project build  
-	f.	Go to Project folder and access the target folder to copy LLMS.war file
-	g.	Go to apache-tomcat\webapps folder and paste war file there.
-	h.	Go to apache-tomcat\bin and start the tomcat server
-	i.	Open browser to test apache-tomcat
-	j.	Give url : http://localhost:8080/LLMS/sc/servicecommunicator/TotalViolations/
-	k.	Now run service: http://localhost:8080/LLMS/sc/servicecommunicator/PhysicalMonitoring/  it will start monitoring service.
-	l.	Enter the data now in database with following query
+	*	Download src and pom file into the appropriate project folder
+	*	Start Command Prompt
+	*	Change the directory to your project directory and folder
+	*	Run “mvn clear install” command
+	*	After succesful project build  
+	*	Go to Project folder and access the target folder to copy LLMS.war file
+	*	Go to apache-tomcat\webapps folder and paste war file there.
+	*	Go to apache-tomcat\bin and start the tomcat server
+	*	Open browser to test apache-tomcat
+	*	Give url : http://localhost:8080/LLMS/sc/servicecommunicator/TotalViolations/
+	*	Now run service: http://localhost:8080/LLMS/sc/servicecommunicator/PhysicalMonitoring/  it will start monitoring service.
+	*	Enter the data now in database with following query
 			insert into tblUserRecognizedActivity
 			 values(1, 35, 3, CURRENT_TIMESTAMP, CURRENT_TIMESTAMP,3)
 			insert into tblUserRecognizedActivity 
 			values(6, 36, 3, CURRENT_TIMESTAMP, CURRENT_TIMESTAMP,3)
-	m.	 The services are available to return data in JSON format. That can be used further
+	*	 The services are available to return data in JSON format. That can be used further
 
 
 
