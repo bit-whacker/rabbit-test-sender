@@ -22,8 +22,7 @@
 - [3. Features](#3-features)
     - [3.1 Use bullets](#31-use-bullets)
    
-- [4. Contributing](#4-contributing)
-    - [4.1 Optional](#41-optional)
+- [4. Contributions](#4-contributions)
    
 - [5. Author](#5-author)
 
@@ -183,7 +182,7 @@ Write the main features
 - Providing situation based indexing for knowledge base in order to classify diverse rules and enhance performance of reasoning.
 - Providing transformation mechanism to represent the knowledge rules into multiple format.
 
-# 4. Contributing
+# 4. Contributions
 
 -	Provide user-friendly Rule Editor to domain experts to maintain the knowledge base. 
 -	Index based rules (Situation enabled) generation and sharing for different services.
