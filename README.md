@@ -162,12 +162,12 @@ Example:
 Once environment has been setup the user can use the Life-log mapping and representation service to persist and fetch different data. User can define own methods to persist the required and customized data into the 
 lifelog. The users can use the methods without modification and customization. When user want to customize and add more functionality into it then follow these steps in projects "MMDataCurationRestfulService" and 
 "IntermediateDatabaseLibrary" source code.
-	*	Add new required table in database "DBMiningMindsV1_5".
-	*	Add Entity class for new added table in corresponding datamodel package e.g. "org.uclab.mm.datamodel.dc".
-	*	Add adapter class for new added table with all required CRUD operations in correspinding adapter package e.g. "org.uclab.mm.datamodel.dc.adapter"
-	*	Add the abstract methods of above CRUD operations in abstract class "AbstractDataBridge".
-	*	Add implementation of the abstract methods in "DatabaseStorage" class.
-	*	call these new created methods by interface in correspinding resource of Restful service "MMDataCurationRestfulService".
+*	Add new required table in database "DBMiningMindsV1_5".
+*	Add Entity class for new added table in corresponding datamodel package e.g. "org.uclab.mm.datamodel.dc".
+*	Add adapter class for new added table with all required CRUD operations in correspinding adapter package e.g. "org.uclab.mm.datamodel.dc.adapter"
+*	Add the abstract methods of above CRUD operations in abstract class "AbstractDataBridge".
+*	Add implementation of the abstract methods in "DatabaseStorage" class.
+*	call these new created methods by interface in correspinding resource of Restful service "MMDataCurationRestfulService".
 
 # 3. Features
 
