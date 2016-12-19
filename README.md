@@ -20,7 +20,6 @@
     - [2.3 Usage](#23-usage)
 	
 - [3. Features](#3-features)
-    - [3.1 Use bullets](#31-use-bullets)
    
 - [4. Contributions](#4-contributions)
    
