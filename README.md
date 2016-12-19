@@ -1,7 +1,7 @@
 # Expert-Driven Knowledge Acquisition: Intelligent Knowledge Authoring Tool (I-KAT)
 <!-- make your own badges from here: http://shields.io/ -->
 [![Version](https://img.shields.io/badge/mining%20minds-version%202.5-green.svg)](http://www.miningminds.re.kr/english/)
-[![License](https://img.shields.io/badge/Apache%20License%20-Version%202.0-yellowgreen.svg)](http://www.miningminds.re.kr/english/)
+[![License](https://img.shields.io/badge/Apache%20License%20-Version%202.0-yellowgreen.svg)](https://www.apache.org/licenses/LICENSE-2.0)
 
 
 --------------------------
@@ -49,7 +49,7 @@ then the system provides the right recommendation at right time.
 ## 1.1 Core Implementation
 
 There is main project developed according to Spring MVC pattern as a maven project.
-- Controllers:
+- Controllers:<br>
 	The controllers provide bridge between the data models and views of the project. Currently we are handling following three controllers to handle 
 	knowledge base (Rules), users of the knowledge base, and wellness concepts model. It contains under the package of "org.uclab.mm.kcl.edkat.controller".
 	- Rule Controller:
@@ -61,7 +61,7 @@ There is main project developed according to Spring MVC pattern as a maven proje
 	- Wellness Model Controller:
 		We provided the intelli-sense to the domain experts on the rule editor to create rules using some controlled vocabulary. Wellness Model Concepts are
 		using in creation of rules. Therefore, "WellnessModelController" handles the communication between views and wellness concepts model.
-- Models:
+- Models:<br>
 	Models is responsible for persisting and fetching the knowledge rules with corresponding conditions, conclusions, and situations from knowledge bases. The
 	model contains three different packages as datamodel, dao (data access objects), and services.
 	- Data Models:
