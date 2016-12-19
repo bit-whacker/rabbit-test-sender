@@ -1,6 +1,6 @@
 # Expert-Driven Knowledge Acquisition: Intelligent Knowledge Authoring Tool (I-KAT)
 <!-- make your own badges from here: http://shields.io/ -->
-[![Version](https://img.shields.io/badge/mining%20minds-version%202.5-green.svg)](http://www.miningminds.re.kr/english/)
+[![Version](https://img.shields.io/badge/mining%20minds-version%202.5-green.svg)(http://www.miningminds.re.kr/english/)
 [![License](https://img.shields.io/badge/Apache%20License%20-Version%202.0-yellowgreen.svg)
 
 
@@ -77,7 +77,7 @@ There is main project developed according to Spring MVC pattern as a maven proje
 		These are local services to handle the communication between controllers and DAO objects and its implementation. The services also contains one interface and one 
 		correspinding implementation class. For example, RuleService is interface and RuleServiceImpl is its implementation. Similarly, ConditionService and ConditionServiceImpl
 		is handling conditions of a rule, ConclusionService and ConclusionServiceImpl is for conclusions of a rule and so on.
-- Views
+- Views:<br>
 	According to spring mvc pattern, views are responsible to view the user interfaces by rendering the correspinding html. The rendered html is merged with data retrived by controllers
 	using particular DAO and services. In this project, we have following three view.
 	- Login View:
@@ -167,13 +167,13 @@ Example:
 
 Once environment has been setup, the user (domain expert) can use this user friendly authoring environment to manage the knowledge base by creating new rules and editing the existing rules. User can 
 modify and customize the code according to their requirements. But users should follow the same spring mvc pattern and hibernate framework for updation the code.
-	*	Add new required table or update the existing table in database "MMIKATDB_V2".
-	*	Add new or update existing controller under the package "org.uclab.mm.kcl.edkat.controller"
-	*	Add new or update existing data model under the package "org.uclab.mm.kcl.edkat.datamodel"
-	*	Add new or update existing DAO object with interface and implementation under the package "org.uclab.mm.kcl.edkat.dao"
-	*	Add new or update existing service with interface and implementation under the package "org.uclab.mm.kcl.edkat.service"
-	*	Add the required objects as bean in servlet-context.xml file under foler hierarchy src/main/webapp/WEB-INF/spring/appServlet according to followed pattern.
-	*	Add new or update the existing views according to the requirements under the folder hierarchy src/main/webapp/WEB-INF/views according to followed pattern.
+*	Add new required table or update the existing table in database "MMIKATDB_V2".
+*	Add new or update existing controller under the package "org.uclab.mm.kcl.edkat.controller"
+*	Add new or update existing data model under the package "org.uclab.mm.kcl.edkat.datamodel"
+*	Add new or update existing DAO object with interface and implementation under the package "org.uclab.mm.kcl.edkat.dao"
+*	Add new or update existing service with interface and implementation under the package "org.uclab.mm.kcl.edkat.service"
+*	Add the required objects as bean in servlet-context.xml file under foler hierarchy src/main/webapp/WEB-INF/spring/appServlet according to followed pattern.
+*	Add new or update the existing views according to the requirements under the folder hierarchy src/main/webapp/WEB-INF/views according to followed pattern.
 
 # 3. Features
 
